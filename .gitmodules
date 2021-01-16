@@ -1,6 +1,8 @@
 [submodule "mbti-api"]
 	path = mbti-api
 	url = https://github.com/sulha199/mbti-api
+	branch = master
 [submodule "mbti-ui"]
 	path = mbti-ui
 	url = https://github.com/sulha199/mbti-ui
+	branch = master
