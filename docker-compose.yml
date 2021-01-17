@@ -1,0 +1,39 @@
+version: '3'
+services:
+  angular-ui:
+    build:
+      context: ./mbti-ui
+      dockerfile: ../angular.dockerfile
+    ports:
+      - "4201:4200"
+    container_name: angular-ui
+    volumes:
+       - ./mbti-ui:/usr/mbti-ui
+       - /usr/mbti-ui/node_modules
+    depends_on:
+      - php
+  php:
+    image: yiisoftware/yii2-php:7.4-apache
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./mbti-api:/app:delegated
+    ports:
+      - '8000:80'
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7.29
+    container_name: mysql
+    volumes:
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: mbti
+      MYSQL_USER: mbti
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
