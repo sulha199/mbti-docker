@@ -14,6 +14,7 @@
 - Need to create more unit test to ensure the QA in the future.
 - Need to setup prettier and linter that runs everytime user is commiting code to GIT in order to prettify the code and check for code smell.
 - setup swagger, so FE can automatically create the data models based on swagger's definition.
+- More error handler, because currently only there is minimum error handler.
 
 ## Frontend's next improvement:
 - Need to create more test to ensure the QA in the future.
@@ -21,5 +22,6 @@
 - Currently, the FE still contains the built-in page and routes. In the future, it should be removed to make the code cleaner.
 - For better user-experience, need to store some user data in browser's local-storage so the app can identify early if user recently just took a test and then offer some information.
 - Need to setup script/plugins that generates Models and FormGroups automatically from swagger's definition.
+- Currently no error handler, so it will need error handler so user get informed when they face an error.
 
 
