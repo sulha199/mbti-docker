@@ -1,8 +1,8 @@
 ## Assumption and explanation:
 - The app doesn't need login/auth feature as its not mentioned in user story
-- The DB's table structure separates the main info of the participant data with its answer and perspective calculation  
-- There is BE's endpoint to see the test result, `http://127.0.0.1:8000/index.php?r=api/participant/perspective&email=[participant's-email-address]`
-- Currently no validation if user have done the MTBI test before, which is can be identified by the email. Therefore, we allow user to input multiple times. However, when showing the test result, it will always the latest result.
+- There is BE's endpoint to see the test result, `http://127.0.0.1:8000/index.php?r=api/participant/perspective&email=[participant's-email-address]`. When showing the test result, it will always show the latest result.
+- The DB's table structure separates the main info of the participant data with its answer and perspective calculation. The structure allows one participant to have multiple perspective calculation result if the MBTI rules change in the future. 
+- Currently no validation if user have done the MTBI test before, which should be able to be identified by the email. Therefore, we allow user to input multiple times.
 - Currently, it only have one unit test that handle the test case based on the requirement.
 
 
