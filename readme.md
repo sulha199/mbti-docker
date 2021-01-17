@@ -8,7 +8,7 @@ Run the MBTI stacks using docker
 - if this is the first time you run the app, please run `docker-compose run --rm php composer install` to install Backend's dependency using composer. 
 - open the file `mbti-ui\src\environments\environment.ts`, and make sure the `environment.api` variable points to the correct ip address. If you use different ip/domain for docker, then please replace `127.0.0.1` to your address. No need to change if you use the default docker configuration.
 - run `docker-compose up -d` to run the docker instance.
-- open url [`http://127.0.0.1:4201/`](`http://127.0.0.1:4201/`) to open the UI, or replace the ip with your address/domain. 
+- open url [http://127.0.0.1:4201/](`http://127.0.0.1:4201/`) to open the UI, or replace the ip with your address/domain. 
 - Sometimes, when you run the app for the second time, the UI won't start. Solution: just run `docker-compose build` after you run `docker-compose up -d` in order to trigger the UI to start.
 - run `docker-compose down` to stop the docker.
 
