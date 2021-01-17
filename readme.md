@@ -1,6 +1,10 @@
 # MBTI
 
-Run the MBTI stacks using docker
+This app is built using:
+- Angular 10 for the frontend.
+- Yii2 on PHP for the backend, it also already support ORM using Yii's [Active Record](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record).
+- MySQL for the database.
+- The frontend and backend codes are submodules for the current repo.
 
 ## Step to runs fullstack app
 - download or clone the current repo
