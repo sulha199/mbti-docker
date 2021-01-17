@@ -5,6 +5,8 @@ This app is built using:
 - Yii2 on PHP for the backend, it also already support ORM using Yii's [Active Record](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record).
 - MySQL for the database.
 - The frontend and backend codes are submodules for the current repo.
+- Frontend's repo is at (https://github.com/sulha199/mbti-ui)[https://github.com/sulha199/mbti-ui]
+- Backend's repo is at (https://github.com/sulha199/mbti-api)[https://github.com/sulha199/mbti-api]
 
 ## Step to runs fullstack app
 - download or clone the current repo
