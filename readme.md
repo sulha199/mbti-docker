@@ -12,6 +12,7 @@ This app is built using:
 - download or clone the current repo
 - run `git submodule update --init --recursive` to pull the submodules from repository.
 - if this is the first time you run the app, please run `docker-compose run --rm php composer install` to install Backend's dependencies using composer. 
+- make sure the docker has permission to write `mbti-api\runtime\cache`, `mbti-api\runtime\debug`, and `mbti-api\runtime\logs` folder
 - open the file `mbti-ui\src\environments\environment.ts`, and make sure the `environment.api` variable points to the correct ip address. If you use different IP/domain for docker, then please replace `127.0.0.1` to your address. No need to change if you use the default docker configuration.
 - run `docker-compose up -d` to run the docker instance.
 - open url [http://127.0.0.1:4201/](http://127.0.0.1:4201/) to open the UI, or replace the IP with your address/domain. 
